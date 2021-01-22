@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import {
-  Collapse,
   Navbar,
-  NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
@@ -16,7 +14,7 @@ class Home extends Component {
     return (
         <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">School Management</NavbarBrand>
+          <NavbarBrand tag={Link} to="/">School Management</NavbarBrand>
             <Nav className="mr-auto" navbar>
               <NavItem>
               <NavLink tag={Link} to="/campuses">Campuses</NavLink>

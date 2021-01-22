@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { AvForm, AvField } from 'availity-reactstrap-validation';
+import { Button } from 'reactstrap';
 export default function EditCampusForm(props) {
 
         const enterName = (e) =>{
@@ -16,29 +17,17 @@ export default function EditCampusForm(props) {
         }
 
     return(
-      <form>
-      Edit Campus:
-      <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Enter Name"
-      onChange={enterName}/>
-      </div>
-      <div class="form-group">
-      <label for="description">Description:</label>
-      <input type="text" class="form-control" id="descriptiont" aria-describedby="description" 
-      placeholder="Enter Description" onChange={enterDescription}/>
-      </div>
-      <div class="form-group">
-      <label for="address">Address:</label>
-      <input type="text" class="form-control" id="address" aria-describedby="address" 
-      placeholder="Enter Address" onChange={enterAddress}/>
-      </div>
-      <div class="form-group">
-      <label for="url">Url:</label>
-      <input type="text" class="form-control" id="url" aria-describedby="url" 
-      placeholder="Enter Url" onChange={enterUrl}/>
-      </div>
-      <button type="submit" class="btn btn-primary" onClick={props.editCampus}>Submit</button>
-      </form>    
+       <AvForm onValidSubmit={props.editCampus}>
+         Edit Campus:
+        <AvField name="name" label="Name:" type="text" errorMessage="Name can't be empty" validate={{
+           required: {value: true}}} onChange={enterName}/>
+        <AvField name="address" label="Address:" type="text" errorMessage="Address can't be empty" validate={{
+           required: {value: true}}} onChange={enterAddress}/>
+        <AvField name="description" label="Description:" type="text" errorMessage="Description can't be empty" validate={{
+           required: {value: true}}} onChange={enterDescription}/>
+        <AvField name="url" label="Url:" type="text" validate={{
+           required: {value: false}}} onChange={enterUrl}/>
+       <Button color="primary">Submit</Button>
+     </AvForm>   
     );
 }
