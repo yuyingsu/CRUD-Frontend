@@ -3,3 +3,4 @@
 
 // export { default as allPlayers} from '../store/utilities/allPlayers';
 export {default as allCampuses} from '../store/utilities/allCampuses';
+export {default as allStudents} from '../store/utilities/allStudents';
