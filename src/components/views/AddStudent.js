@@ -26,7 +26,7 @@ class AddStudent extends React.Component{
                 <form onSubmit={this.onFormSubmit} action="/student" method="POST">
                     <h1>Add A student</h1>
                     <div>
-                        <label>First Name: </label>
+                        <label>First Names: </label>
                         <input value={this.state.name} onChange={e => this.setState({ first_name: e.target.value })} type="text" />
                     </div>
                     <div>
