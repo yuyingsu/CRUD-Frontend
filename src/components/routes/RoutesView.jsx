@@ -6,8 +6,8 @@ import {AllCampusesContainer, AllStudentsContainer} from '../containers';
 const RoutesView = () => {
   return (
     <Switch>
-      <Route exact path="/allcampuses" component={AllCampusesContainer} />
-      <Route exact path = "/allstudents" component = {AllStudentsContainer}/>
+      <Route exact path="/campuses" component={AllCampusesContainer} />
+      <Route exact path = "/students" component = {AllStudentsContainer}/>
     </Switch>
   )
 }

@@ -7,12 +7,8 @@ const allStudentsView = (props) => {
             {props.allStudents.map((student) => (
                 <div key = {student.id}>
                     <div className = "studentsCard">
-                        <img
-                            src = {student.image_url}
-                            alt = {student.first_name}
-                        />
                         <h1>{student.first_name} {student.last_name}</h1>
-                        <p>{student.gpa}</p>
+                        <br/>
                     </div>
                 </div>
             ))}
