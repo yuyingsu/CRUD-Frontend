@@ -1,7 +1,7 @@
 import { FETCH_CAMPUSES, FETCH_STUDENTS, NEW_CAMPUS, NEW_STUDENT, DELETE_CAMPUS,
 DELETE_STUDENT, UPDATE_CAMPUS, UPDATE_STUDENT } from '../constants/types';
 export const fetchCampuses = () => dispatch => {
-    fetch('http://localhost:5000/campus')
+    fetch('https://ttp-backend-db.herokuapp.com/campus')
       .then(res => res.json())
       .then(campuses =>
         dispatch({
@@ -12,7 +12,7 @@ export const fetchCampuses = () => dispatch => {
   }
   
 export const addCampus = campusData => dispatch => {
-    fetch('http://localhost:5000/campus', {
+    fetch('https://ttp-backend-db.herokuapp.com/campus', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -29,7 +29,7 @@ export const addCampus = campusData => dispatch => {
   }
 
 export const deleteCampus = id => dispatch => {
-    fetch('http://localhost:5000/campus/'+id, {
+    fetch('https://ttp-backend-db.herokuapp.com/campus/'+id, {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'
@@ -45,7 +45,7 @@ export const deleteCampus = id => dispatch => {
   }
 
 export const updateCampus = (campus,id) => dispatch => {
-    fetch('http://localhost:5000/campus/'+id, {
+    fetch('https://ttp-backend-db.herokuapp.com/campus/'+id, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json'
@@ -62,7 +62,7 @@ export const updateCampus = (campus,id) => dispatch => {
   }
 
   export const fetchStudents = () => dispatch => {
-    fetch('http://localhost:5000/student')
+    fetch('https://ttp-backend-db.herokuapp.com/student')
       .then(res => res.json())
       .then(students =>
         dispatch({
@@ -73,7 +73,7 @@ export const updateCampus = (campus,id) => dispatch => {
   }
   
 export const addStudent = studentData => dispatch => {
-    fetch('http://localhost:5000/student', {
+    fetch('https://ttp-backend-db.herokuapp.com/student', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -90,7 +90,7 @@ export const addStudent = studentData => dispatch => {
   }
 
 export const deleteStudent = id => dispatch => {
-    fetch('http://localhost:5000/student/'+id, {
+    fetch('https://ttp-backend-db.herokuapp.com/student/'+id, {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'
@@ -106,7 +106,7 @@ export const deleteStudent = id => dispatch => {
   }
 
 export const updateStudent = (student,id) => dispatch => {
-    fetch('http://localhost:5000/student/'+id, {
+    fetch('https://ttp-backend-db.herokuapp.com/student/'+id, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json'

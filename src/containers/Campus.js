@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { updateCampus, updateStudent } from '../actions/actions';
 import EnrollStudentForm from '../components/EnrollStudentForm';
 import { Link } from 'react-router-dom';
+
 const Campus = (props) => {
 
     const [show, setShow] = useState(false);
