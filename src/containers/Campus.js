@@ -95,7 +95,8 @@ const Campus = (props) => {
       }
       {show &&
       <EditCampusForm inputAddress={inputAddress} inputUrl={inputUrl} inputDescription={inputDescription} 
-      inputName={inputName} editCampus={editCampus}/>
+      inputName={inputName} editCampus={editCampus} address={campus.address} description={campus.description} 
+      name={campus.name} url={campus.image_url}/>
       }
       <Link to={'/'}>Back To Home</Link>
     </div>

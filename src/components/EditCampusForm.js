@@ -20,13 +20,13 @@ export default function EditCampusForm(props) {
        <AvForm onValidSubmit={props.editCampus}>
          Edit Campus:
         <AvField name="name" label="Name:" type="text" errorMessage="Name can't be empty" validate={{
-           required: {value: true}}} onChange={enterName}/>
+           required: {value: true}}} onChange={enterName} value={props.name}/>
         <AvField name="address" label="Address:" type="text" errorMessage="Address can't be empty" validate={{
-           required: {value: true}}} onChange={enterAddress}/>
+           required: {value: true}}} onChange={enterAddress} value={props.address}/>
         <AvField name="description" label="Description:" type="text" errorMessage="Description can't be empty" validate={{
-           required: {value: true}}} onChange={enterDescription}/>
+           required: {value: true}}} onChange={enterDescription} value={props.description}/>
         <AvField name="url" label="Url:" type="text" validate={{
-           required: {value: false}}} onChange={enterUrl}/>
+           required: {value: false}}} onChange={enterUrl} value={props.url}/>
        <Button color="primary">Submit</Button>
      </AvForm>   
     );

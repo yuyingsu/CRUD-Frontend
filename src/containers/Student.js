@@ -85,7 +85,8 @@ const Student = (props) => {
       }
       {show &&
       <EditStudentForm inputEmail={inputEmail} inputUrl={inputUrl} inputFirstName={inputFirstName} inputLastName={inputLastName}
-      inputGpa={inputGpa} editStudent={editStudent}/>
+      inputGpa={inputGpa} editStudent={editStudent} url={student.image_url} first_name={student.first_name} 
+      last_name={student.last_name} gpa={student.gpa} email={student.email}/>
       }
       {message}
     </div>

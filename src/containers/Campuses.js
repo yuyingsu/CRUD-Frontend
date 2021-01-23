@@ -56,7 +56,7 @@ class Campuses extends Component {
         <span>
         <Col xs="12" s="6" m="3" l="3" xl="3">
         <CardCampus address={campus.address} image_url={campus.image_url} name={campus.name} key={campus.id} id={campus.id}/>
-        <div><Button onClick={() => this.deleteCampus(campus.id)}>Delete</Button></div>
+        <div><Button style={{margin:"40px"}} onClick={() => this.deleteCampus(campus.id)}>Delete</Button></div>
         </Col>
         </span>));  
     return (

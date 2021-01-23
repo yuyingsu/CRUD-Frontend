@@ -62,7 +62,7 @@ class Students extends Component {
         <span>
         <Col xs="12" s="6" m="3" l="3" xl="3">
         <CardStudent first_name={student.first_name} img_url={student.image_url} last_name={student.last_name} key={student.id} id={student.id}/>
-        <Button onClick={() => this.deleteStudent(student.id)}>Delete</Button>
+        <Button style={{margin:"40px"}} onClick={() => this.deleteStudent(student.id)}>Delete</Button>
         </Col>
         </span>));  
     return (
